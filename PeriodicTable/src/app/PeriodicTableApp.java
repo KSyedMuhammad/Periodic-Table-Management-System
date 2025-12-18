@@ -1,9 +1,13 @@
 package app;
 
-public class PeriodicTableApp {
-	
-	public static void main(String[]args) {
-		System.out.println("========= Bismillah =========");
-	}
+import model.Element;
 
+import java.util.List;
+import java.util.Scanner;
+
+public class PeriodicTableApp {
+
+    public static void main(String[] args) { 
+    	
+    }
 }
