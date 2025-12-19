@@ -7,10 +7,8 @@ import java.util.Scanner;
 public class PeriodicTableApp {
 
     public static void main(String[] args) { 
-    	String str = "I love India";
     	
-    	String rev = new StringBuilder(str).reverse().toString();
-    	ElementService es = new ElementService();
+       	ElementService es = new ElementService();
     	Scanner sc = new Scanner(System.in);
     	  	
     	while(true) {
