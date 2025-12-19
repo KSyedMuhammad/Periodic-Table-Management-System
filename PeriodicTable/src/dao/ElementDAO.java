@@ -44,7 +44,7 @@ public class ElementDAO {
 		
 		try (Connection conn = DBConnection.getConnection();
 				PreparedStatement ps = conn.prepareStatement(sql)) {
-			ps.setString(2, symbol);
+			ps.setString(1, symbol);
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
