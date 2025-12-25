@@ -1,6 +1,7 @@
 package dao;
 
 import db.DBConnection;
+
 import model.Element;
 
 import java.sql.Connection;
@@ -63,6 +64,34 @@ public class ElementDAO {
             e.printStackTrace();
 		}
 		return element;
+	}
+	
+	public List<Element> getAllElements() {
+		List<Element> ll = new ArrayList<>();
+		String sql = "SELECT * FROM elements  ORDER BY atomic_number";
+		
+		try (Connection conn = DBConnection.getConnection();
+				PreparedStatement ps = conn.prepareStatement(sql)) {
+			    ResultSet rs = ps.executeQuery();
+			    
+			    while(rs.next()) {
+			    	ll.add(new Element (
+			    			 rs.getInt("atomic_number"),
+			                 rs.getString("name"),
+			                 rs.getString("symbol"),
+			                 rs.getDouble("atomic_mass"),
+			                 rs.getInt("period"),
+			                 rs.getInt("group_no"),
+			                 rs.getString("category"),
+			                 rs.getString("state_at_room_temp")
+			    			));
+			    }
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ll;
 	}
 	
 }	

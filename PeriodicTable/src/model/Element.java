@@ -1,7 +1,5 @@
 package model;
-
 public class Element {
-	
 	private int atomicNumber;
 	private String name;
 	private String symbol;
@@ -15,7 +13,6 @@ public class Element {
 	
 	public Element(int atomicNumber,String name, String symbol, double atomicMass, 
 			int period, int groupNo, String category,String stateAtRoomTemp ) {
-		
 		this.atomicNumber = atomicNumber;
 		this.name = name;
 		this.symbol = symbol;
@@ -24,7 +21,6 @@ public class Element {
 		this.groupNo = groupNo;
 		this.category = category;
 		this.stateAtRoomTemp = stateAtRoomTemp;
-		
 	}
 	
 	public int getAtomicNumber() {return atomicNumber;}
